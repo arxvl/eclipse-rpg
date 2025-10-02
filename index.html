@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Eclipse: Shadow of the Dragon</title>
+    <link rel="stylesheet" href="styles.css" />
+    </head>
+<body>
+
+    <div id="game">
+    <!-- Starter selection -->
+        <div id="classSelection" class="panel">
+            <h1>⚔ Eclipse: Shadow of the Dragon</h1>
+            <p class="center">Choose your starter class</p>
+            <div class="class-grid">
+                <button class="class-btn" data-class="Warrior">Warrior<br><small>HP 120 • Gold 40 • Melee</small>
+                    <img src="assets\images\warrior.png" alt="Warrior" class="sprites"/>
+                </button>
+                <button class="class-btn" data-class="Mage">Mage<br><small>HP 80 • Gold 60 • Magic</small>
+                    <img src="assets\images\wizard.png" alt="wizard" class="sprites wizard"/>
+                </button>
+                <button class="class-btn" data-class="Rogue">Rogue<br><small>HP 100 • Gold 50 • Dodge</small>
+                    <img src="assets\images\rouge.png" alt="rouge" class="sprites rouge"/>
+                </button>
+            </div>
+        </div>
+
+        <!-- Main game (hidden until class chosen) -->
+        <div id="mainGame" class="hidden panel">
+            <h1 class="small-title">⚔ Eclipse: Shadow of the Dragon</h1>
+
+            <!-- Character Stats -->
+            <div class="all-stats">
+                <div id="stats">
+                    <div class="set">Class: <span id="classText">—</span></div>
+                    <br>
+                    <div class="set">Score: <span id="scoreText">0</span></div>
+                    <div class="set">XP: <span id="xpText">0</span></div>
+                    <div class="set">Health: <span id="healthText">100</span>/<span id="maxHealth">120</span></div>
+                    <div class="set">Gold: <span id="goldText">50</span></div>
+                    <div class="set">Potions: <span id="potionText">0</span></div>
+                    <div class="set">Weapon: <span id="weaponText">None</span></div>
+                    <div class="set">Armor: <span id="armorText">None</span></div>
+                    <div class="set">Kills: <span id="killsText">0</span></div>
+                </div>
+
+            <!-- Monster Stats -->
+                <div id="monsterStats" class="hidden">
+                    <div class="set">Monster: <span id="monsterName"></span></div>
+                    <div class="set">Health: <span id="monsterHealth"></span></div>
+                </div>
+            </div>
+
+            <!-- Location -->
+            <div id="location-text" class="location">Location: <span id="location">Town Square</span></div>
+
+            <!-- Battle scene Container -->
+            <div id="battleScene" class="hidden">
+                <div class="sprites-battle">
+                    <img id="playerSprite" alt="Player"/>
+                    <img id="monsterSprite" alt="Monster"/>
+                </div>
+            </div>
+
+            <div id="infoText" class="info">Welcome, adventurer! Choose a place to go.</div>
+
+            <!--Menu controls-->
+            <div id="controls" class="controls">
+            <button id="button1">Go to store</button>
+            <button id="button2">Go to cave</button>
+            <button id="button3">Fight dragon</button>
+            <button id="resetBtn">Reset Game</button>
+            <button id="mainMenuBtn">Main Menu</button> 
+            </div>
+
+            <!-- store panel -->
+            <div id="storeItems" class="store-grid hidden">
+            </div>
+        </div>
+
+            <!--History Panel-->
+            <div id="history" class="panel small hidden">
+            <h4>Battle History</h4>
+            <ul id="historyLog"></ul>
+            </div>
+
+            <!--Leaderboard Panel-->
+            <div id="leaderboard" class="panel small">
+            <h4>Leaderboard (Top final scores)</h4>
+            <ol id="leaderboardList"></ol>
+            <button id="leaderboardResetBtn">Reset Leaderboard</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    </body>
+</html>
