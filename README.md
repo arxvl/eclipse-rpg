@@ -1,4 +1,4 @@
-# Eclipse: Shadow of the Dargon 
+# Eclipse: Shadow of the Dragon 
 
 A text-based role-playing game inspired by classic games.  
 Players can choose a starter class (Warrior, Mage, or Rogue), explore different locations, battle monsters, buy weapons/armor/potions, and defeat the dragon to save the town.
